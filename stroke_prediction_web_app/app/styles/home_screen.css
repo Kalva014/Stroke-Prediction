@@ -1,0 +1,41 @@
+/* home_screen.css */
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #3498db, #1abc9c); /* Gradient background */
+  }
+  
+  .title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .content {
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .action {
+    margin-top: 30px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: #0070f3;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn.clicked {
+    background: #0050a0;
+  }
+  

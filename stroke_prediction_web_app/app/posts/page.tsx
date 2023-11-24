@@ -1,3 +1,9 @@
+import '../styles/home_screen.css'
+
 export default function Prediction() {
-  return <h1>Testing</h1>
+  return (
+    <main className="home">
+      <div className="content"></div>
+    </main>
+  )
 }
