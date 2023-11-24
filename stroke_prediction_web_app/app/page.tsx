@@ -9,7 +9,7 @@ export default function Home() {
            <h1>See How Susceptible You Are To Stroke</h1>
         </div>
         <div className='action'>
-          <Link href="/posts/" className="btn" > Check Your Risk </Link>
+          <Link href="/prediction/" className="btn" > Check Your Risk </Link>
         </div>
 
       </div>
