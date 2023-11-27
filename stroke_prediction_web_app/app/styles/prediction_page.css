@@ -63,11 +63,37 @@ input {
     border-radius: 4px;
     font-size: 16px;
   }
-  
-  .home {
+
+  /* prediction_page.css */
+
+/* ... (previous styles) */
+
+.home {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     background: linear-gradient(to bottom right, #3498db, #1abc9c); /* Gradient background */
   }
+  
+  label, option {
+    color: black; /* or a color that contrasts with the background */
+    /* Add other styles as needed */
+  }
+  
+  input, select {
+    color: black; /* or a color that contrasts with the background */
+  }
+  
+  input, select {
+    background-color: white; /* or the desired background color */
+  }
+  
+  input, select {
+    border: 1px solid #ccc; /* or the desired border style */
+  }
+
+  input, select {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* or the desired box shadow */
+  }
+  
