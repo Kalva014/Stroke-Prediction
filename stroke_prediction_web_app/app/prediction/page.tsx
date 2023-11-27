@@ -14,6 +14,7 @@ const Prediction: React.FC<PredictionProps> = () => {
   const [bmi, setBMI] = useState<string>('');
   const [gender, setGender] = useState<string>('');
   const [smokingStatus, setSmokingStatus] = useState<string>('');
+  const [submissionResult, setSubmissionResult] = useState<string>('');
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setAge(event.target.value);
@@ -43,9 +44,38 @@ const Prediction: React.FC<PredictionProps> = () => {
     setSmokingStatus(event.target.value);
   };
 
-  const handleSubmit = () => {
-    console.log('Submitted:', age, selectedOption1, selectedOption2, selectedOption3, glucoseLevel, bmi, gender, smokingStatus);
-  };
+  const handleSubmit = async () => {
+    const data = {
+      age,
+      hypertension: selectedOption1,
+      heartDisease: selectedOption2,
+      glucoseLevel,
+      bmi,
+      gender,
+      smokingStatus,
+    };
+    
+
+    try {
+      console.log(data)
+      const response = await fetch('http://127.0.0.1:8080/api/model', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+  
+      const result = await response.json();
+      setSubmissionResult(result.message); // Assuming the backend returns a message
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
+  };  
 
   return (
     <main className="home">
@@ -116,6 +146,9 @@ const Prediction: React.FC<PredictionProps> = () => {
           <button onClick={handleSubmit} className="btn">
             Submit
           </button>
+          {submissionResult && (
+            <p className="submission-result">{`Submission Result: ${submissionResult}`}</p>
+          )}
         </form>
       </div>
     </main>
