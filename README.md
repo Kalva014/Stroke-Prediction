@@ -1,6 +1,8 @@
 # Stroke-Prediction
 
-Created a prediction ML model to provide the likelihood that someone could get a stroke. The goal is so that people can prevent it in the future whether that be adjusting their lifestyle. The model was trained off of the stroke prediction dataset https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset
+Created a prediction ML model to provide the likelihood that someone could get a stroke. The goal is so that people can prevent it in the future whether that be adjusting their lifestyle. The model was trained off of the stroke prediction dataset and I tested several models. Specifically Logistic Regression, Support Vector Machines, and Decision Trees. 
+
+Dataset Link: https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset
 
 ## Motivation
 
