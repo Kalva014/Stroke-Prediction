@@ -14,7 +14,6 @@ Stroke is one of the leading causes of death and has personally affected ones cl
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the required packages.
 
 ```bash
-pip install foobar
 pip install flask
 pip install Flask-Cors
 pip install pickle
