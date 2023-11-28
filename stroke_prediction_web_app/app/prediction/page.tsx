@@ -55,9 +55,7 @@ const Prediction: React.FC<PredictionProps> = () => {
       smokingStatus,
     };
     
-
     try {
-      console.log(data)
       const response = await fetch('http://127.0.0.1:8080/api/model', {
         method: 'POST',
         headers: {
@@ -71,7 +69,9 @@ const Prediction: React.FC<PredictionProps> = () => {
       }
   
       const result = await response.json();
-      setSubmissionResult(result.message); // Assuming the backend returns a message
+      setSubmissionResult(result.prediction); // Assuming the backend returns a message
+      // Display prediction
+      console.log(result);
     } catch (error) {
       console.error('Error submitting form:', error);
     }

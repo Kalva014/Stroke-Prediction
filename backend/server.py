@@ -83,8 +83,8 @@ def handle_prediction():
     y = model.predict(x)
     print("Prediction: ", y[0])
 
-    # Return a response
-    return jsonify({'message': 'Prediction successful'})
+    # Return a response with the prediction result
+    return jsonify({'prediction': y.tolist()})
 
 # Running app
 if __name__ == '__main__':
