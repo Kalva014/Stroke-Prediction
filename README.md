@@ -22,6 +22,16 @@ pip install pandas
 ```
 
 
+## How To Use
+
+1. Open two terminals
+2. CD in first terminal into stroke_prediction_web_app
+3. CD in second terminal into backend
+4. In the first terminal run npm run dev
+5. In the second terminal run python server.py
+6. Open web app on hosted server
+
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
